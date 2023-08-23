@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="calci.css" type="text/css">
+        <script>
+            function show(input)
+            {
+                document.getElementById("res").value+=input
+            }
+
+            function cal()
+            {
+                var c;
+                c=eval(document.getElementById("res").value);
+                document.getElementById("res").value=c
+            }        
+        </script>
+    </head>
+    <body>
+        <table class="calsi-tab" border="1" width="350" height="350" cellspacing="6"> 
+            <tr >
+                <td style="font-size: 30px;text-align: center;" colspan="4"><strong>CALCULATOR</strong></td>
+                  
+            </tr>
+            <tr>
+                <td colspan="3"><input style="width: 90%;"type="text" id="res" ></input></td>
+                <td><button style="margin-left:20px;" type="button" onclick='document.getElementById("res").value=""'>AC</button></td>
+            </tr>
+            <tr>
+                <td align="center" ><button  type="button" onclick="show('1')">1</button>
+                <td align="center" ><button type="button" onclick="show('2')">2</button></td>
+                <td align="center" ><button type="button" onclick="show('3')">3</button></td>
+                <td align="center" ><button type="button" onclick="show('+')">+</button></td>
+            </tr> 
+           
+            <tr>
+                <td align="center" ><button type="button" onclick="show('4')">4</button></td>
+                <td align="center" ><button type="button" onclick="show('5')">5</button></td>
+                <td align="center" ><button type="button" onclick="show('6')">6</button></td>
+                <td align="center" ><button type="button" onclick="show('-')">-</button></td>
+            </tr> 
+            <tr>
+                <td align="center" ><button type="button" onclick="show('7')">7</button></td>
+                <td align="center" ><button type="button" onclick="show('8')">8</button></td>
+                <td align="center" ><button type="button" onclick="show('9')">9</button></td>
+                <td align="center" ><button style="padding-top: 5px;font-size: 25px;"type="button" onclick="show('*')">*</button></td>
+            </tr> 
+            <tr>
+                <td align="center" ><button type="button" onclick="show('0')">0</button></td>
+                <td align="center" ><button type="button" onclick="show('%')">%</button></td>
+                <td align="center" ><button type="button" onclick="show('/')">/</button></td>
+                <td align="center" ><button type="button" onclick="cal()">=</button></td>
+            </tr> 
+         </table>
+    </body>
+        
+</html>
+
+
+<!--CSS-->
+
+                  
+body{
+    background-color: black;
+}
+.calsi-tab{
+    background-color:rgb(39, 79, 166);
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px 3px white;
+    margin: 120px auto;
+}
+.calsi-tab tr button{
+    width: 40px;
+    height: 30px;
+    font-size: 20px;
+
+}
+
+
+
+          
